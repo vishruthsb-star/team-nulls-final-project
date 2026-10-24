@@ -1,0 +1,29 @@
+:root {
+  --bg-page: #0b0d10;
+  --bg-card: #12151a;
+  --bg-raised: #171b21;
+  --bg-hover: #1c2229;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(126, 231, 224, 0.38);
+  --text-primary: #eff4f5;
+  --text-secondary: #d0d8dc;
+  --text-muted: #aab5bc;
+  --accent-warm: #b88858;
+  --accent: #7ee7e0;
+  --accent-dim: rgba(126, 231, 224, 0.13);
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+  --radius-sm: 10px; --radius-card: 16px; --radius-lg: 20px; --radius-pill: 999px;
+  --shadow-card: 0 18px 38px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  --glow-card: linear-gradient(180deg, rgba(255,255,255,0.025), transparent 26%);
+  --font-sans: 'Manrope Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --text-xs: .72rem; --text-sm: .86rem; --text-base: 1rem; --text-lg: 1.25rem;
+  --duration-fast: 160ms; --duration: 200ms; --duration-view: 300ms;
+  --ease: cubic-bezier(.2, .75, .2, 1);
+  --content-width: 1240px;
+}
+
+/* Profile legibility overrides: all chart SVGs below are rendered in real pixels. */
+#app #country-trust .profile-panel{padding:var(--space-5);overflow-x:auto;min-height:530px}#app #country-trust .profile-panel svg{display:block;width:auto;max-width:none;height:auto}
+#country-trust .profile-panels{align-items:stretch}#country-trust .profile-panel{padding:var(--space-5);overflow-x:auto}#country-trust .profile-panel svg{display:block;width:auto;max-width:none;height:auto}.panel-title{font-size:18px}.panel-subtitle{font-size:13px}.heatmap-column,.heatmap-row,.heatmap-legend text,.behavior-value,.anchor-label{font-family:var(--font-mono);fill:var(--text-secondary)}.heatmap-column,.heatmap-row{font-weight:600}.heatmap-value{font-family:var(--font-mono);font-weight:700}.active-column-outline{fill:none;stroke:var(--accent);stroke-width:2.5}.heatmap-cell{stroke:var(--bg-page);stroke-width:1}.behavior-label{fill:var(--text-primary);font-family:var(--font-sans)}.behavior-value{font-weight:700}.quadrant-label{fill:var(--text-muted);opacity:.82}.anchor-label{paint-order:stroke;stroke:var(--bg-card);stroke-width:4px;stroke-linejoin:round}.anchor-label.selected{fill:var(--accent);font-weight:700}.country-dot{opacity:.86}.country-dot.selected{opacity:1}.profile-axis text,.axis-title{fill:var(--text-secondary)}.profile-panel:not(.profile-panel-heat){min-height:530px}.behavior-bar.below{fill:var(--accent-warm)}.profile-axis line,.profile-axis path,.quadrant-line{stroke:rgba(255,255,255,.2)}.zero-line{stroke:#c1c9ce;stroke-width:1.5}

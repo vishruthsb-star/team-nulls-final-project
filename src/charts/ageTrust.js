@@ -1,4 +1,5 @@
 import * as d3 from 'd3';
+import { setText } from '../dom.js';
 
 export function renderAgeTrust(container, data, state, onAgeClick) {
   const rows = data.filter((row) => row.trust_composite_score !== null && (!state.filters.country || row.country_label === state.filters.country));
@@ -12,10 +13,10 @@ export function renderAgeTrust(container, data, state, onAgeClick) {
   svg.append('g').attr('transform', `translate(0,${height - margin.bottom})`).call(d3.axisBottom(x));
   svg.append('g').attr('transform', `translate(${margin.left},0)`).call(d3.axisLeft(y).ticks(5));
   svg.append('g').selectAll('rect').data(summary).join('rect').attr('x', (d) => x(d.age)).attr('y', (d) => y(d.mean)).attr('width', x.bandwidth()).attr('height', (d) => y(1) - y(d.mean)).attr('rx', 4)
-    .attr('fill', (d) => state.filters.ageGroup === d.age ? '#f2b134' : '#087e8b').attr('tabindex', 0).attr('role', 'button').attr('aria-label', (d) => `${d.age}, trust ${d.mean.toFixed(2)}. Click to filter.`)
+    .attr('fill', (d) => state.filters.ageGroup === d.age ? '#7ee7e0' : '#52616a').attr('tabindex', 0).attr('role', 'button').attr('aria-label', (d) => `${d.age}, trust ${d.mean.toFixed(2)}. Click to filter.`)
     .on('click keydown', (event, d) => { if (event.type === 'click' || event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onAgeClick(d.age); } });
   svg.append('text').attr('x', margin.left).attr('y', 14).attr('class', 'axis-label').text('Mean trust score');
-  container.querySelector('.chart-meta').textContent = 'Click an age group to filter the country view.';
+  return setText('.chart-meta', 'Click an age group to filter the country view.', container.closest('.chart-shell'));
 }
 
 export function updateAgeTrust(...args) { renderAgeTrust(...args); }
