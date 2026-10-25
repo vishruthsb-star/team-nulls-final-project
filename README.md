@@ -2,12 +2,6 @@
 
 An interactive CS4460 Data Visualization final project exploring public trust in Level 3 autonomous vehicles through the L3Pilot Global User Acceptance Survey.
 
-## Team
-
-- Team member name — placeholder
-- Team member name — placeholder
-- Team member name — placeholder
-
 ## Run locally
 
 Prerequisite: Node.js 20.19+ or 22.12+.
